@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;600;700;900&display=swap");
+
+/*----------------------
+Global style 
+----------------------*/
+/*---- Define custom css variables Default theme ----*/
+:root {
+  --color_main_1: #ffdd00;
+  --color_main_2: #ffffff;
+  --color_main_3: #000000;
+  --color_main_4: #ff0000;
+  --color_main_5: #29323c;
+
+  --color_linear_1: #29323c;
+  --color_linear_2: #243949;
+  --color_linear_3: #485563;
+  --color_linear_4: #d7d2cc;
+
+  --color_bg_transparent_1: rgba(0, 0, 0, 0.6);
+  --color_bg_transparent_2: rgba(0, 0, 0, 0.5);
+  --color_bg_transparent_3: rgba(255, 255, 255, 0.08);
+  --color_bg_transparent_4_hover_btn: rgba(255, 221, 0, 0.8);
+
+  --z_index_1: 1;
+
+  /*--------- Light Theme ---------*/
+  --color_1: #ffffff;
+  --color_2: #000000;
+
+  --text-black-700: #555555;
+  --text-black-600: #666666;
+  --text-black-300: #bbbbbb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", sans-serif;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a:hover {
+  color: var(--color_main_1);
+}
+
+a:active {
+  color: var(--color_main_1);
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    -45deg,
+    var(--color_linear_1),
+    var(--color_linear_2),
+    var(--color_linear_3),
+    var(--color_linear_4)
+  );
+  background-size: 400% 400%;
+  position: relative;
+  animation: change 10s ease-in-out infinite;
+}
+
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.login-page .login-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page .form {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  padding: 80px 40px 40px;
+  background: var(--color_bg_transparent_1);
+  border-radius: 10px;
+  color: var(--color_main_2);
+  box-shadow: 0 10px 25px var(--color_bg_transparent_2);
+}
+
+.login-page #forgot-password {
+  display: none;
+}
+
+.login-page .form img {
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+  width: 100px;
+  border-radius: 50%;
+  background: var(--color_bg_transparent_3);
+}
+
+.login-page .form h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--color_main_1);
+  text-transform: uppercase;
+}
+
+.login-page .form .input-group {
+  position: relative;
+}
+
+.login-page .form .input-group input {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  border: none;
+  border-bottom: 1px solid var(--color_main_2);
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+.login-page .form .input-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 15px;
+  pointer-events: none;
+  transition: 0.3s ease-out;
+}
+
+.login-page .form .input-group input:focus {
+  border-bottom: 1px solid var(--color_main_1);
+}
+
+.login-page .form .input-group input:focus + label,
+.login-page .form .input-group input:valid + label {
+  transform: translateY(-24px);
+  color: var(--color_main_1);
+  font-size: 12px;
+}
+
+.login-page #forgot-password .form .input-group input:focus + label,
+.login-page #forgot-password .form .input-group input:valid + label,
+.login-page #forgot-password .form .input-group input:invalid + label {
+  transform: translateY(-24px);
+  color: var(--color_main_1);
+  font-size: 12px;
+}
+
+.login-page .form .submit-btn {
+  display: block;
+  margin: auto;
+  border: none;
+  outline: none;
+  background-color: var(--color_main_1);
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 5px 10px 30px var(--color_bg_transparent_2);
+  transition: 0.1s ease-in;
+}
+
+.login-page .form .submit-btn:hover {
+  background-color: var(--color_bg_transparent_4_hover_btn);
+}
+
+.login-page .form .forgot-password {
+  text-decoration: none;
+  color: var(--color_main_2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page .form .forgot-password:hover {
+  color: var(--color_main_1);
+}
+
+.login-page #forgot-password {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  z-index: var(--z_index_1);
+  background-color: var(--color_main_5);
+  opacity: 0;
+  transition: 0.6s;
+}
+
+#forgot-password:target {
+  height: 100%;
+  opacity: 1;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 50px;
+  font-weight: 300;
+  text-decoration: none;
+  color: var(--color_main_2);
+}
