@@ -1,11 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import "./style.css";
 import "../../assets/fontawesome/css/all.css";
-import logo from "../../assets/logo/logo100_100.png";
+import logo from "../../assets/logo/logo500_500.png";
 
 class Login extends React.Component {
   render() {
+    const link = "# ";
+
     return (
       <div>
         <section className="login-page">
@@ -51,7 +53,7 @@ class Login extends React.Component {
             </form>
             <div id="forgot-password">
               <form className="form">
-                <a href="#" className="close">
+                <a href={link} className="close">
                   ×
                 </a>
                 <h1>Reset Password</h1>
