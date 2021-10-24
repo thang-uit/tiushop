@@ -59,7 +59,7 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 100;
+  z-index: 101;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px 1px;
 }
 
@@ -159,8 +159,8 @@
 }
 
 .dropdown-menu-notification {
+  display: none;
   list-style-type: none;
-  display: flex;
   flex-direction: column;
   position: absolute;
   right: 20%;
@@ -174,8 +174,8 @@
 }
 
 .dropdown-menu-avatar {
+  display: none;
   list-style-type: none;
-  display: flex;
   flex-direction: column;
   position: absolute;
   right: 20%;
@@ -188,6 +188,10 @@
   padding: unset;
 }
 
+.dropdown-menu-expand {
+  display: flex;
+}
+
 .dropdown-menu-content {
   max-height: 500px;
   overflow-y: auto;
@@ -195,10 +199,6 @@
 
 .dropdown-menu-item {
   width: 100%;
-}
-
-.dropdown-menu-item:hover{
-  
 }
 
 .dropdown-menu-link {
@@ -251,4 +251,90 @@
   padding: 10px;
   text-align: center;
   border-top: 1px solid var(--second-bg-color);
+}
+
+.content {
+  padding: 10px;
+  padding-top: 75px;
+  margin-left: 82px;
+  background-color: var(--second-bg-color);
+  transition: margin-left 0.5s;
+}
+
+.slidebar {
+  width: 82px;
+  height: 100vh;
+  position: fixed;
+  margin-top: 70px;
+  background-color: var(--main-bg-color);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4px 1px;
+  overflow: hidden;
+  z-index: 100;
+  transition: width 0.5s;
+}
+
+.slidebar:hover {
+  width: 250px;
+}
+
+.slidebar-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.slidebar-nav-item {
+  width: 100%;
+}
+
+.slidebar-nav-link i {
+  font-size: 1.5rem;
+  color: var(--second-color);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slidebar-nav-link {
+  display: flex;
+  align-items: center;
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.slidebar-nav-link div {
+  min-width: 82px;
+  height: 50px;
+  position: relative;
+}
+
+.slidebar-nav-link:hover {
+  background-color: var(--second-bg-color);
+}
+
+.slidebar-nav-link.active {
+  background-color: var(--second-bg-color);
+  color: var(--primary-color);
+}
+
+.slidebar-nav-link.active div {
+  border-left: 5px solid var(--primary-color);
+}
+
+.slidebar-nav-link.active i {
+  color: var(--primary-color);
+  margin-left: -5px;
+}
+
+.slidebar-expand .slidebar {
+  width: 250px;
+}
+
+.slidebar-expand .content {
+  margin-left: 250px;
 }
