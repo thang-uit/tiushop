@@ -1,5 +1,5 @@
 import React from "react";
-// import ReactDOM from "react-dom";
+import ReactDOM from "react-dom";
 import "./style.css";
 import "../../assets/fontawesome/css/all.css";
 import logo from "../../assets/logo/logo322_116.png";
@@ -13,6 +13,10 @@ class Home extends React.Component {
     // openMenu = (event) => {
     //     console.log(event.target.className);
     // }
+
+    swithTheme = (event) => {
+        console.log(event.target.className);
+    }
 
 
     render() {
@@ -51,6 +55,11 @@ class Home extends React.Component {
                     </form>
 
                     <ul className="navbar-nav nav-right">
+                        <li className="nav-item">
+                            <a className="nav-link" href="# " onClick={this.swithTheme}>
+                                <i className="fas fa-moon"></i>
+                            </a>
+                        </li>
                         <li className="nav-item dropdown">
                             <a href="# " className="nav-link">
                                 <i className="fas fa-bell dropdown-toggle" data-toggle="notification-menu" onClick={this.openMenu}></i>
@@ -286,7 +295,7 @@ class Home extends React.Component {
 
                         <li className="slidebar-nav-item">
                             <a href="# " className="slidebar-nav-link">
-                                <div><i class="fab fa-product-hunt"></i></div>
+                                <div><i className="fab fa-product-hunt"></i></div>
                                 <span>Product</span>
                             </a>
                         </li>
@@ -302,28 +311,28 @@ class Home extends React.Component {
 
                         <li className="slidebar-nav-item">
                             <a href="# " className="slidebar-nav-link">
-                                <div><i class="fas fa-clipboard-check"></i></div>
+                                <div><i className="fas fa-clipboard-check"></i></div>
                                 <span>Order Confirmed</span>
                             </a>
                         </li>
 
                         <li className="slidebar-nav-item">
                             <a href="# " className="slidebar-nav-link">
-                                <div><i class="fas fa-archive"></i></div>
+                                <div><i className="fas fa-archive"></i></div>
                                 <span>Package</span>
                             </a>
                         </li>
 
                         <li className="slidebar-nav-item">
                             <a href="# " className="slidebar-nav-link">
-                                <div><i class="fas fa-truck"></i></div>
+                                <div><i className="fas fa-truck"></i></div>
                                 <span>Delivery</span>
                             </a>
                         </li>
 
                         <li className="slidebar-nav-item">
                             <a href="# " className="slidebar-nav-link">
-                                <div><i class="fas fa-check-circle"></i></div>
+                                <div><i className="fas fa-check-circle"></i></div>
                                 <span>Order Success</span>
                             </a>
                         </li>
