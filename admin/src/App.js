@@ -1,5 +1,5 @@
 import Home from "./page/home/home";
-import Login from "./page/login/login";
+// import Login from "./page/login/login";
 
 function App() {
   return (
