@@ -272,13 +272,13 @@
 .content {
   padding: 10px;
   padding-top: 75px;
-  margin-left: 82px;
+  margin-left: 250px;
   background-color: var(--second-bg-color);
   transition: margin-left 0.5s;
 }
 
 .slidebar {
-  width: 82px;
+  width: 250px;
   height: 100vh;
   position: fixed;
   margin-top: 70px;
@@ -386,6 +386,10 @@ Dashboard
   color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.counter:hover {
+  cursor: pointer;
 }
 
 .counter i {
@@ -633,3 +637,76 @@ table th {
   text-align: left;
 }
 
+table tr:hover {
+  background-color: var(--second-bg-color);
+  cursor: pointer;
+}
+
+.dot i {
+  display: inline-block;
+  width: 0.385rem;
+  height: 0.385rem;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 0.385rem;
+  margin-top: -0.2rem;
+}
+
+.progress-wrapper {
+  margin-bottom: 15px;
+}
+
+.float-right {
+  float: right;
+}
+
+.progress {
+  height: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0.25rem;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.width-10 {
+  width: 10%;
+}
+
+.width-20 {
+  width: 20%;
+}
+
+.width-30 {
+  width: 30%;
+}
+
+.width-40 {
+  width: 40%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.width-60 {
+  width: 60%;
+}
+
+.width-70 {
+  width: 70%;
+}
+
+.width-80 {
+  width: 80%;
+}
+
+.width-90 {
+  width: 90%;
+}
+
+.width-100 {
+  width: 100%;
+}
