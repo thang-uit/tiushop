@@ -9,7 +9,7 @@
   --light-background: #ffffff;
   --light-second-background: #f1f1f1;
 
-  --dark-color: #909090;
+  --dark-color: #e6e6e6;
   --dark-second-color: #f5f6fa;
   --dark-background: #23242d;
   --dark-second-background: #181818;
@@ -615,7 +615,8 @@ Dashboard
 .card-header {
   position: relative;
   padding: 15px 30px;
-  border-bottom: 1px solid var(--second-bg-color);
+  background-color: var(--success-color);
+  border-radius: 10px 10px 0 0;
 }
 
 .card-header i:hover {
@@ -635,7 +636,7 @@ Dashboard
 }
 
 .card-content {
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   overflow-x: auto;
 }
 

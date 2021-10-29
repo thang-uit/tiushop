@@ -1,6 +1,12 @@
 import React from "react";
 // import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  BrowserRouter,
+} from "react-router-dom";
 import "./style.css";
 import "../../assets/fontawesome/css/all.css";
 import logo from "../../assets/logo/logo322_116.png";
@@ -8,6 +14,7 @@ import avatar from "../../assets/images/avatar.png";
 import Dashboard from "./dashboard/dashboard";
 import Product from "./product/product";
 import NewOrder from "./order/neworder";
+import NotFound from "./notfound/notfound";
 
 class Home extends React.Component {
   // constructor(props) {
@@ -41,7 +48,7 @@ class Home extends React.Component {
     // });
 
     return (
-      <Router>
+      <BrowserRouter>
         <div>
           {/* Nav bar */}
           <div className="navbar">
@@ -426,11 +433,15 @@ class Home extends React.Component {
               <Route path="/neworder">
                 <NewOrder />
               </Route>
+
+              <Route>
+                <NotFound />
+              </Route>
             </Switch>
           </div>
           {/* End Content */}
         </div>
-      </Router>
+      </BrowserRouter>
     );
   }
 }
